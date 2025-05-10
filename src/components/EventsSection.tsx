@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,7 +25,7 @@ const events: EventProps[] = [
     title: "New York Mindfulness Workshop",
     date: "June 15, 2025",
     time: "7:00 PM - 10:00 PM",
-    location: "New York City",
+    location: "New York, NY",
     venue: "Lincoln Center",
     spotsAvailable: 75,
     price: 499,
@@ -36,44 +35,44 @@ const events: EventProps[] = [
     title: "Los Angeles Meditation Retreat",
     date: "July 8, 2025",
     time: "6:00 PM - 9:00 PM",
-    location: "Los Angeles",
+    location: "Los Angeles, CA",
     venue: "The Ritz-Carlton",
     spotsAvailable: 50,
     price: 599
   },
   {
-    title: "London Purpose Discovery",
+    title: "Chicago Purpose Discovery",
     date: "August 21, 2025",
     time: "6:30 PM - 9:30 PM",
-    location: "London",
-    venue: "The Savoy",
+    location: "Chicago, IL",
+    venue: "The Four Seasons",
     spotsAvailable: 60,
     price: 449
   },
   {
-    title: "Toronto Wisdom Session",
+    title: "Miami Wisdom Session",
     date: "September 3, 2025",
     time: "7:00 PM - 10:00 PM",
-    location: "Toronto",
-    venue: "Four Seasons Hotel",
+    location: "Miami, FL",
+    venue: "Faena Forum",
     spotsAvailable: 45,
     price: 399
   },
   {
-    title: "Sydney Inner Growth Journey",
+    title: "San Francisco Inner Growth Journey",
     date: "October 17, 2025",
     time: "6:00 PM - 9:00 PM",
-    location: "Sydney",
-    venue: "Sydney Opera House",
+    location: "San Francisco, CA",
+    venue: "Palace of Fine Arts",
     spotsAvailable: 80,
     price: 549
   },
   {
-    title: "Singapore Mind Mastery",
+    title: "Seattle Mind Mastery",
     date: "November 25, 2025",
     time: "6:30 PM - 9:30 PM",
-    location: "Singapore",
-    venue: "Marina Bay Sands",
+    location: "Seattle, WA",
+    venue: "Benaroya Hall",
     spotsAvailable: 55,
     price: 499
   }
