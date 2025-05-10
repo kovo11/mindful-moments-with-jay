@@ -31,125 +31,155 @@ interface EventsSectionProps {
 
 const allEvents: EventProps[] = [
   {
-    title: "New York Mindfulness Workshop",
-    date: "June 15, 2025",
+    title: "Vancouver Mindfulness Workshop",
+    date: "May 12, 2025",
     time: "7:00 PM - 10:00 PM",
-    location: "New York, NY",
-    state: "NY",
-    venue: "Lincoln Center",
+    location: "Vancouver, BC",
+    state: "BC",
+    venue: "Orpheum",
     spotsAvailable: 75,
     price: 499,
     isFeatured: true
   },
   {
-    title: "Los Angeles Meditation Retreat",
-    date: "July 8, 2025",
+    title: "Chicago Meditation Experience",
+    date: "May 13, 2025",
     time: "6:00 PM - 9:00 PM",
-    location: "Los Angeles, CA",
-    state: "CA",
-    venue: "The Ritz-Carlton",
-    spotsAvailable: 50,
-    price: 599
-  },
-  {
-    title: "Chicago Purpose Discovery",
-    date: "August 21, 2025",
-    time: "6:30 PM - 9:30 PM",
     location: "Chicago, IL",
     state: "IL",
-    venue: "The Four Seasons",
-    spotsAvailable: 60,
-    price: 449
-  },
-  {
-    title: "Miami Wisdom Session",
-    date: "September 3, 2025",
-    time: "7:00 PM - 10:00 PM",
-    location: "Miami, FL",
-    state: "FL",
-    venue: "Faena Forum",
-    spotsAvailable: 45,
-    price: 399
-  },
-  {
-    title: "San Francisco Inner Growth Journey",
-    date: "October 17, 2025",
-    time: "6:00 PM - 9:00 PM",
-    location: "San Francisco, CA",
-    state: "CA",
-    venue: "Palace of Fine Arts",
+    venue: "The Chicago Theatre",
     spotsAvailable: 80,
     price: 549
   },
   {
-    title: "Seattle Mind Mastery",
-    date: "November 25, 2025",
+    title: "Toronto Purpose Discovery",
+    date: "May 14, 2025",
     time: "6:30 PM - 9:30 PM",
-    location: "Seattle, WA",
-    state: "WA",
-    venue: "Benaroya Hall",
-    spotsAvailable: 55,
-    price: 499
-  },
-  {
-    title: "Austin Mindfulness Experience",
-    date: "January 14, 2026",
-    time: "6:00 PM - 9:00 PM",
-    location: "Austin, TX",
-    state: "TX",
-    venue: "The Driskill",
-    spotsAvailable: 65,
-    price: 479
-  },
-  {
-    title: "Boston Consciousness Seminar",
-    date: "February 22, 2026",
-    time: "7:00 PM - 10:00 PM",
-    location: "Boston, MA",
-    state: "MA",
-    venue: "Boston Park Plaza",
+    location: "Toronto, ON",
+    state: "ON",
+    venue: "Meridian Hall",
     spotsAvailable: 70,
     price: 489
   },
   {
-    title: "Denver Elevation Workshop",
-    date: "March 11, 2026",
-    time: "6:30 PM - 9:30 PM",
-    location: "Denver, CO",
-    state: "CO",
-    venue: "The Brown Palace Hotel",
-    spotsAvailable: 55,
-    price: 469
+    title: "Boston Inner Growth Journey",
+    date: "May 15, 2025",
+    time: "7:00 PM - 10:00 PM",
+    location: "Boston, MA",
+    state: "MA",
+    venue: "Boch Center - Wang Theatre",
+    spotsAvailable: 65,
+    price: 479
   },
   {
-    title: "Atlanta Purpose Forum",
-    date: "April 5, 2026",
+    title: "New York Mindfulness Workshop",
+    date: "May 17, 2025",
     time: "6:00 PM - 9:00 PM",
-    location: "Atlanta, GA",
-    state: "GA",
-    venue: "The St. Regis Atlanta",
-    spotsAvailable: 60,
-    price: 459
+    location: "New York, NY",
+    state: "NY",
+    venue: "Theater at Madison Square Garden",
+    spotsAvailable: 85,
+    price: 599
   },
   {
     title: "Philadelphia Inner Peace Workshop",
-    date: "May 18, 2026",
-    time: "7:00 PM - 10:00 PM",
+    date: "May 19, 2025",
+    time: "6:30 PM - 9:30 PM",
     location: "Philadelphia, PA",
     state: "PA",
-    venue: "The Rittenhouse Hotel",
-    spotsAvailable: 50,
-    price: 439
+    venue: "The Met",
+    spotsAvailable: 60,
+    price: 469
   },
   {
-    title: "Portland Harmony Retreat",
-    date: "June 23, 2026",
+    title: "Washington D.C. Wisdom Session",
+    date: "May 21, 2025",
+    time: "7:00 PM - 10:00 PM",
+    location: "Washington, D.C.",
+    state: "DC",
+    venue: "DAR Constitution Hall",
+    spotsAvailable: 70,
+    price: 489
+  },
+  {
+    title: "Atlanta Purpose Forum",
+    date: "May 22, 2025",
+    time: "6:00 PM - 9:00 PM",
+    location: "Atlanta, GA",
+    state: "GA",
+    venue: "Atlanta Symphony Hall",
+    spotsAvailable: 65,
+    price: 479
+  },
+  {
+    title: "Hollywood Harmony Retreat",
+    date: "May 23, 2025",
     time: "6:30 PM - 9:30 PM",
-    location: "Portland, OR",
-    state: "OR",
-    venue: "The Nines",
-    spotsAvailable: 45,
-    price: 429
+    location: "Hollywood, FL",
+    state: "FL",
+    venue: "Hard Rock Live",
+    spotsAvailable: 90,
+    price: 569
+  },
+  {
+    title: "Los Angeles Meditation Retreat",
+    date: "May 29, 2025",
+    time: "7:00 PM - 10:00 PM",
+    location: "Los Angeles, CA",
+    state: "CA",
+    venue: "The Greek Theatre",
+    spotsAvailable: 100,
+    price: 599
+  },
+  {
+    title: "San Francisco Mind Mastery",
+    date: "May 30, 2025",
+    time: "6:00 PM - 9:00 PM",
+    location: "San Francisco, CA",
+    state: "CA",
+    venue: "The Theater at Bill Graham Civic Auditorium",
+    spotsAvailable: 95,
+    price: 589
+  },
+  {
+    title: "Phoenix Elevation Workshop",
+    date: "May 31, 2025",
+    time: "6:30 PM - 9:30 PM",
+    location: "Phoenix, AZ",
+    state: "AZ",
+    venue: "Arizona Financial Theatre",
+    spotsAvailable: 75,
+    price: 529
+  },
+  {
+    title: "Dallas Consciousness Seminar",
+    date: "June 2, 2025",
+    time: "7:00 PM - 10:00 PM",
+    location: "Dallas, TX",
+    state: "TX",
+    venue: "AT&T Performing Arts Center",
+    spotsAvailable: 80,
+    price: 549
+  },
+  {
+    title: "Seattle Mindfulness Experience",
+    date: "June 4, 2025",
+    time: "6:00 PM - 9:00 PM",
+    location: "Seattle, WA",
+    state: "WA",
+    venue: "WAMU Theater",
+    spotsAvailable: 85,
+    price: 559
+  },
+  {
+    title: "Denver Inner Growth Journey",
+    date: "June 5, 2025",
+    time: "6:30 PM - 9:30 PM",
+    location: "Denver, CO",
+    state: "CO",
+    venue: "Ellie Caulkins Opera House",
+    spotsAvailable: 70,
+    price: 499
   }
 ];
 
@@ -253,7 +283,7 @@ const EventsSection = ({ openBooking }: EventsSectionProps) => {
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Upcoming Events</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Join Jay Shetty at one of his exclusive meet & greet events happening across the United States.
+            Join Jay Shetty at one of his exclusive meet & greet events happening across North America.
             Limited spots available for these transformative experiences.
           </p>
         </div>
