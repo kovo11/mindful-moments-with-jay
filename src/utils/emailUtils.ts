@@ -114,7 +114,7 @@ export const sendConfirmationEmail = async (
   location: string,
   eventType: string,
   formattedDate?: string
-): Promise<emailjs.EmailJSResponseStatus> => {
+): Promise<any> => {
   try {
     const emailContent = generateEmailTemplate(name, location, eventType, formattedDate);
     
@@ -148,7 +148,7 @@ export const sendSupportEmail = async (
   bookingDetails: string,
   eventType: string,
   location: string
-): Promise<emailjs.EmailJSResponseStatus> => {
+): Promise<any> => {
   try {
     const formattedType = formatEventType(eventType);
     
@@ -185,7 +185,7 @@ export const sendBookingEmails = async (
   eventType: string,
   bookingDetails: string,
   formattedDate?: string
-): Promise<[emailjs.EmailJSResponseStatus, emailjs.EmailJSResponseStatus]> => {
+): Promise<[any, any]> => {
   try {
     const confirmationPromise = sendConfirmationEmail(email, name, location, eventType, formattedDate);
     const supportPromise = sendSupportEmail(name, email, bookingDetails, eventType, location);

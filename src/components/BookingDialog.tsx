@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,11 +24,6 @@ import { cn } from "@/lib/utils";
 import { toast } from "@/hooks/use-toast";
 import { initEmailJS, sendBookingEmails } from "@/utils/emailUtils";
 import { z } from "zod";
-
-// Initialize EmailJS when component is first loaded
-useEffect(() => {
-  initEmailJS();
-}, []);
 
 interface BookingDialogProps {
   open: boolean;
@@ -178,6 +172,11 @@ Marketing Consent: ${marketingConsent ? 'Yes' : 'No'}
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    // Initialize EmailJS when the component mounts
+    initEmailJS();
+  }, []);
   
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
