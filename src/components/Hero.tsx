@@ -27,7 +27,7 @@ const Hero = ({ openBooking }: HeroProps) => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Meet 
             <span className="ml-3 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent animate-pulse">
