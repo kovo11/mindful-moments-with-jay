@@ -1,33 +1,105 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
+import { initEmailJS, sendBookingEmails } from "@/utils/emailUtils";
+import { z } from "zod";
+
+// Email validation schema
+const registerFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  isAgreed: z.boolean().refine(val => val === true, {
+    message: "You must agree to receive email updates",
+  }),
+});
+
+type RegisterFormData = z.infer<typeof registerFormSchema>;
 
 const RegisterSection = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof RegisterFormData, string>>>({});
   
-  const handleSubmit = (e: React.FormEvent) => {
+  // Initialize EmailJS
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+  
+  const validateForm = (): boolean => {
+    const formData = { name, email, isAgreed };
+    const result = registerFormSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof RegisterFormData, string>> = {};
+      
+      result.error.errors.forEach(error => {
+        if (error.path[0]) {
+          fieldErrors[error.path[0] as keyof RegisterFormData] = error.message;
+        }
+      });
+      
+      setErrors(fieldErrors);
+      return false;
+    }
+    
+    setErrors({});
+    return true;
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const registrationDetails = `
+        Name: ${name}
+        Email: ${email}
+        Marketing Consent: ${isAgreed ? 'Yes' : 'No'}
+        Registration Type: Interest List
+        Date Submitted: ${new Date().toLocaleString()}
+      `.trim();
+      
+      // Send interest registration emails
+      await sendBookingEmails(
+        email,
+        name,
+        "Global Events",
+        "interest_registration",
+        registrationDetails
+      );
+      
       toast({
         title: "Registration Successful",
         description: "Thank you for your interest! We'll notify you about upcoming events.",
         duration: 5000,
       });
+      
       setEmail("");
       setName("");
       setIsAgreed(false);
-    }, 1000);
+    } catch (error) {
+      console.error("Error submitting registration:", error);
+      
+      toast({
+        title: "Registration Failed",
+        description: "We couldn't process your registration. Please try again later.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -62,7 +134,9 @@ const RegisterSection = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required 
+                className={errors.name ? "border-red-500" : ""}
               />
+              {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
             </div>
             
             <div className="space-y-2">
@@ -74,7 +148,9 @@ const RegisterSection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required 
+                className={errors.email ? "border-red-500" : ""}
               />
+              {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
             </div>
             
             <div className="flex items-start space-x-2">
@@ -83,11 +159,13 @@ const RegisterSection = () => {
                 checked={isAgreed}
                 onCheckedChange={(checked) => setIsAgreed(checked as boolean)}
                 required 
+                className={errors.isAgreed ? "border-red-500" : ""}
               />
               <Label htmlFor="agree" className="text-sm leading-tight">
                 I agree to receive email updates about Jay Shetty's events and can unsubscribe at any time.
               </Label>
             </div>
+            {errors.isAgreed && <p className="text-sm text-red-500">{errors.isAgreed}</p>}
             
             <Button 
               type="submit" 

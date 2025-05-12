@@ -1,11 +1,18 @@
 
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { initEmailJS } from "@/utils/emailUtils";
 
 interface HeroProps {
   openBooking: () => void;
 }
 
 const Hero = ({ openBooking }: HeroProps) => {
+  useEffect(() => {
+    // Initialize EmailJS when the component mounts
+    initEmailJS();
+  }, []);
+
   const scrollToEvents = () => {
     const eventsSection = document.getElementById("events");
     if (eventsSection) {
