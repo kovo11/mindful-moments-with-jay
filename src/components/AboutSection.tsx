@@ -5,8 +5,21 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-16 md:py-24 bg-purple-50 dark:bg-gray-800/50">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="md:w-1/2 lg:w-2/5">
+            <div className="relative mx-auto max-w-md md:max-w-full">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30 animate-pulse"></div>
+              <div className="relative rounded-full overflow-hidden aspect-square w-full border-2 border-white dark:border-gray-800">
+                <img 
+                  src="/lovable-uploads/2f1e5000-de2c-49b0-88a1-42d7275be74c.png" 
+                  alt="Jay Shetty" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <div className="md:w-1/2 lg:w-3/5 mt-12 md:mt-0 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Jay Shetty</h2>
             
             <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -54,19 +67,6 @@ const AboutSection = () => {
                 <span>Take home exclusive resources and materials</span>
               </li>
             </ul>
-          </div>
-          
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30 animate-pulse"></div>
-              <div className="relative rounded-full overflow-hidden aspect-square max-w-md border-2 border-white dark:border-gray-800">
-                <img 
-                  src="/lovable-uploads/2f1e5000-de2c-49b0-88a1-42d7275be74c.png" 
-                  alt="Jay Shetty" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
