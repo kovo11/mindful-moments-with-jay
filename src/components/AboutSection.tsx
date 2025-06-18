@@ -1,72 +1,83 @@
 
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award, Heart, Mic, Users } from "lucide-react";
 
 const AboutSection = () => {
+  const values = [
+    {
+      icon: Heart,
+      title: "Authentic Storytelling",
+      description: "We believe in the power of raw, honest narratives that connect us to our shared humanity."
+    },
+    {
+      icon: Users,
+      title: "Global Community",
+      description: "Your story joins a worldwide network of voices creating positive change and healing."
+    },
+    {
+      icon: Mic,
+      title: "Professional Platform",
+      description: "Share your message through one of the world's most trusted and respected podcast platforms."
+    },
+    {
+      icon: Award,
+      title: "Lasting Impact",
+      description: "Be part of a legacy that inspires others to find courage, hope, and purpose in their own journeys."
+    }
+  ];
+
   return (
-    <section id="about" className="py-16 md:py-24 bg-purple-50 dark:bg-gray-800/50">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Jay Shetty</h2>
-            
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Jay Shetty is a #1 New York Times bestselling author, award-winning podcast host, 
-              former monk, and purpose coach dedicated to helping people experience profound personal transformation.
-            </p>
-            
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              After spending three years as a monk in India, Jay has dedicated his life to sharing the timeless wisdom 
-              he learned with the world. His mission is to make wisdom go viral and help people find their purpose 
-              and create a life of meaning and impact.
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center">
-                <p className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400">11M+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Social Followers</p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center">
-                <p className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400">7B+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Video Views</p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center">
-                <p className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400">400M+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Podcast Downloads</p>
-              </div>
-            </div>
-            
-            <h3 className="text-xl font-semibold mb-3">Why Meet Jay in Person?</h3>
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-purple-600 dark:text-purple-400 mr-2">✓</span>
-                <span>Experience personal connection with Jay in an intimate setting</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 dark:text-purple-400 mr-2">✓</span>
-                <span>Ask your questions directly and receive personalized insights</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 dark:text-purple-400 mr-2">✓</span>
-                <span>Connect with like-minded individuals on similar journeys</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 dark:text-purple-400 mr-2">✓</span>
-                <span>Take home exclusive resources and materials</span>
-              </li>
-            </ul>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            About 
+            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2">
+              "Real People, Real Stories"
+            </span>
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+            This special mini-series on <em>On Purpose with Jay Shetty</em> is dedicated to amplifying the voices 
+            of everyday heroes whose stories of resilience, transformation, and service deserve to be heard. 
+            We believe that in sharing our struggles and triumphs, we create bridges of understanding and hope 
+            that can heal both the storyteller and the listener.
+          </p>
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6">
+            <blockquote className="text-xl italic text-gray-700 dark:text-gray-300 font-medium">
+              "The stories that we tell ourselves and others have the power to shape our reality. 
+              When we share our truth with courage and vulnerability, we give others permission to do the same."
+            </blockquote>
+            <p className="text-purple-600 dark:text-purple-400 font-semibold mt-4">— Jay Shetty</p>
           </div>
-          
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30 animate-pulse"></div>
-              <div className="relative rounded-full overflow-hidden aspect-square max-w-md border-2 border-white dark:border-gray-800">
-                <img 
-                  src="/lovable-uploads/2f1e5000-de2c-49b0-88a1-42d7275be74c.png" 
-                  alt="Jay Shetty" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.map((value, index) => (
+            <Card key={index} className="text-center border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <CardHeader className="pb-4">
+                <div className="mx-auto w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+                  <value.icon className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle className="text-lg">{value.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base leading-relaxed">
+                  {value.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Why Your Story Matters</h3>
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              In a world that often feels divided, stories have the unique power to remind us of our shared humanity. 
+              Your journey—with all its ups and downs—contains wisdom that could be the key to someone else's breakthrough. 
+              By sharing your story, you're not just telling your truth; you're offering hope, healing, and connection to 
+              millions of listeners around the world.
+            </p>
           </div>
         </div>
       </div>

@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import EventsSection from "@/components/EventsSection";
+import StoriesSection from "@/components/StoriesSection";
 import AboutSection from "@/components/AboutSection";
+import ProcessSection from "@/components/ProcessSection";
+import InvestmentSection from "@/components/InvestmentSection";
 import GallerySection from "@/components/GallerySection";
 import FaqSection from "@/components/FaqSection";
 import RegisterSection from "@/components/RegisterSection";
@@ -38,8 +40,10 @@ const Index = () => {
       <Navbar isScrolled={isScrolled} openBooking={openBooking} />
       <main>
         <Hero openBooking={openBooking} />
-        <EventsSection openBooking={openBooking} />
+        <StoriesSection openBooking={openBooking} />
         <AboutSection />
+        <ProcessSection />
+        <InvestmentSection openBooking={openBooking} />
         <VideoSection />
         <GallerySection />
         <FaqSection />
