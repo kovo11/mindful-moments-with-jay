@@ -25,6 +25,10 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
+
+  const handleApplyNow = () => {
+    window.open("https://forms.gle/FYMu132khWKLLYiw8", "_blank");
+  };
   
   return (
     <header 
@@ -62,7 +66,7 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
           </div>
           
           <Button 
-            onClick={openBooking} 
+            onClick={handleApplyNow} 
             className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90"
           >
             Apply Now
@@ -104,7 +108,7 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
           
           <Button 
             onClick={() => {
-              openBooking();
+              handleApplyNow();
               setIsMenuOpen(false);
             }} 
             className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 w-full"

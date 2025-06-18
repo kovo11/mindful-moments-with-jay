@@ -46,7 +46,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact & Partners</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: stories@onpurpose.me</li>
+              <li>Email: on-purpose@jayshetty.info</li>
               <li>Phone: +1 (888) 555-0123</li>
               <li className="pt-2">
                 <p className="text-sm">Co-produced with:</p>

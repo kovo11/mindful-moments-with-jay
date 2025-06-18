@@ -8,6 +8,8 @@ import StoriesSection from "@/components/StoriesSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import InvestmentSection from "@/components/InvestmentSection";
+import PressSection from "@/components/PressSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
 import GallerySection from "@/components/GallerySection";
 import FaqSection from "@/components/FaqSection";
 import RegisterSection from "@/components/RegisterSection";
@@ -40,10 +42,12 @@ const Index = () => {
       <Navbar isScrolled={isScrolled} openBooking={openBooking} />
       <main>
         <Hero openBooking={openBooking} />
+        <PressSection />
         <StoriesSection openBooking={openBooking} />
         <AboutSection />
         <ProcessSection />
         <InvestmentSection openBooking={openBooking} />
+        <GuaranteeSection />
         <VideoSection />
         <GallerySection />
         <FaqSection />

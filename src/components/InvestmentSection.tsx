@@ -37,6 +37,10 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
     }
   ];
 
+  const handleApplyNow = () => {
+    window.open("https://forms.gle/FYMu132khWKLLYiw8", "_blank");
+  };
+
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -111,7 +115,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
               
               <div className="text-center">
                 <Button
-                  onClick={openBooking}
+                  onClick={handleApplyNow}
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white font-medium px-12 py-4 text-lg"
                 >

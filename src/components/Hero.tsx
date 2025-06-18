@@ -22,6 +22,10 @@ const Hero = ({ openBooking }: HeroProps) => {
     }
   };
 
+  const handleApplyNow = () => {
+    window.open("https://forms.gle/FYMu132khWKLLYiw8", "_blank");
+  };
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background gradient */}
@@ -57,7 +61,7 @@ const Hero = ({ openBooking }: HeroProps) => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button
-              onClick={openBooking}
+              onClick={handleApplyNow}
               size="lg"
               className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white font-medium px-8"
             >
