@@ -59,7 +59,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
               <div className="mx-auto w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
                 <DollarSign className="w-8 h-8 text-white" />
               </div>
-              <CardTitle className="text-3xl font-bold mb-2">$2,500</CardTitle>
+              <CardTitle className="text-3xl font-bold mb-2">$250</CardTitle>
               <CardDescription className="text-lg">
                 Complete Professional Production Package
               </CardDescription>
