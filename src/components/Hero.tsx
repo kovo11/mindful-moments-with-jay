@@ -35,6 +35,13 @@ const Hero = ({ openBooking }: HeroProps) => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-6">
+            <p className="text-sm font-medium text-purple-600 dark:text-purple-400 mb-2">
+              Co-produced with <a href="#" className="underline hover:text-purple-700">Mindvalley Media</a> • 
+              Supported by <a href="#" className="underline hover:text-purple-700">On Purpose Community</a>
+            </p>
+          </div>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Your Story Deserves to Be
             <span className="ml-3 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent animate-pulse">

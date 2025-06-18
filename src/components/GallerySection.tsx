@@ -7,26 +7,30 @@ interface TestimonialProps {
   author: string;
   role: string;
   image?: string;
+  social?: string;
 }
 
 const testimonials: TestimonialProps[] = [
   {
-    content: "Meeting Jay in person was truly life-changing. His wisdom and presence radiate in a way that can't be captured through videos or podcasts. Worth every penny!",
-    author: "Sarah Johnson",
-    role: "CEO, Mindful Living Co.",
-    image: "https://i.pravatar.cc/150?img=32"
+    content: "Honestly wasn't sure about this at first but the whole process was so supportive. My story aired last month and I've had strangers message me saying it helped them through their own struggles. Worth it 100%",
+    author: "Maya Rodriguez",
+    role: "Teacher & Mom",
+    image: "https://i.pravatar.cc/150?img=32",
+    social: "@maya_teaches"
   },
   {
-    content: "The intimate setting of Jay's event allowed for meaningful connections not just with him but with other attendees. I left with new perspectives and lifelong friends.",
-    author: "Michael Chen",
-    role: "Author & Entrepreneur",
-    image: "https://i.pravatar.cc/150?img=69"
+    content: "The prep call really helped me get clear on what I wanted to share. Jay asked questions I hadn't even thought of. Still get chills listening back to my episode.",
+    author: "David Kim",
+    role: "Small Business Owner",
+    image: "https://i.pravatar.cc/150?img=69",
+    social: "@davidbuilds"
   },
   {
-    content: "Jay has a remarkable ability to make complex wisdom accessible and practical. I've been implementing his advice for months now and seeing real changes in my life.",
+    content: "I was nervous about being so vulnerable on such a big platform, but the team made it feel safe. My episode just went live and the response has been incredible. People are sharing their own stories now too ❤️",
     author: "Priya Patel",
     role: "Wellness Coach",
-    image: "https://i.pravatar.cc/150?img=47"
+    image: "https://i.pravatar.cc/150?img=47",
+    social: "@priyawellness"
   }
 ];
 
@@ -35,9 +39,9 @@ const GallerySection = () => {
     <section id="gallery" className="py-16 md:py-24 bg-purple-50 dark:bg-gray-800/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Gallery & Testimonials</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Gallery & Stories</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            See highlights from past events and hear what attendees have to say about their experience with Jay.
+            See highlights from recent recording sessions and hear from guests who've shared their stories.
           </p>
         </div>
         
@@ -45,7 +49,7 @@ const GallerySection = () => {
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/8ab62c60-56db-42f0-92da-5f70de8eb564.png" 
-              alt="Jay Shetty Event" 
+              alt="Recording Session" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -59,14 +63,14 @@ const GallerySection = () => {
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/ee47be30-7138-4562-bcc7-070fc2713f63.png" 
-              alt="Jay Shetty Speaking" 
+              alt="Interview Setup" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/99ab6ae0-9b81-4c92-b077-83ecd1b587e8.png" 
-              alt="Jay Shetty with Guests" 
+              alt="Jay with Guest" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -87,9 +91,12 @@ const GallerySection = () => {
                   <div>
                     <h4 className="font-medium">{testimonial.author}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
+                    {testimonial.social && (
+                      <p className="text-xs text-purple-600 dark:text-purple-400">{testimonial.social}</p>
+                    )}
                   </div>
                 </div>
-                <p className="italic text-gray-700 dark:text-gray-300">"{testimonial.content}"</p>
+                <p className="text-gray-700 dark:text-gray-300">"{testimonial.content}"</p>
               </CardContent>
             </Card>
           ))}

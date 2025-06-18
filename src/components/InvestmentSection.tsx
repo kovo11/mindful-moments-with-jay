@@ -97,13 +97,15 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
               </div>
               
               <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6 mb-8">
-                <h4 className="text-lg font-semibold mb-3">Why We Ask for This Investment:</h4>
+                <h4 className="text-lg font-semibold mb-3">Our Commitment to Your Story:</h4>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  Our intention has never been to sell stories. This support fee simply ensures our team can 
+                  uphold the integrity, quality, and care your story deserves. This is not a payment for 
+                  appearance — it's an investment in your voice being heard the way it should.
+                </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  This contribution ensures we can provide the highest level of professional production, 
-                  from our experienced audio engineers to our skilled story coaches. It also demonstrates 
-                  your commitment to sharing your story authentically and powerfully. Most importantly, 
-                  it allows us to maintain the quality and integrity that our global audience expects 
-                  while giving your story the platform it deserves.
+                  Most importantly, it allows us to maintain the quality and integrity that our global 
+                  audience expects while giving your story the platform it deserves.
                 </p>
               </div>
               
