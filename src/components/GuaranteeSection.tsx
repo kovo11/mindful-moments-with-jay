@@ -5,11 +5,6 @@ import { Shield, CheckCircle, Clock, Heart } from "lucide-react";
 const GuaranteeSection = () => {
   const guaranteePoints = [
     {
-      icon: Shield,
-      title: "100% Satisfaction Guarantee",
-      description: "If you're not completely satisfied with your experience, we'll provide a full refund within 30 days of your recording session."
-    },
-    {
       icon: CheckCircle,
       title: "Quality Assurance",
       description: "We guarantee professional-grade production quality that meets Mel Robbins' high standards for authenticity and impact."
@@ -23,6 +18,11 @@ const GuaranteeSection = () => {
       icon: Heart,
       title: "Respectful Treatment",
       description: "We commit to treating your story with the utmost respect and care throughout the entire process."
+    },
+    {
+      icon: Shield,
+      title: "Professional Standards",
+      description: "We maintain the highest level of professionalism and integrity throughout your entire storytelling journey."
     }
   ];
 
@@ -33,7 +33,7 @@ const GuaranteeSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our 
             <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
-              Guarantee
+              Commitment
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -42,19 +42,6 @@ const GuaranteeSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="border-2 border-green-200 dark:border-green-800 shadow-lg mb-8">
-            <CardHeader className="text-center bg-gradient-to-r from-green-50 to-orange-50 dark:from-green-900/20 dark:to-orange-900/20">
-              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <CardTitle className="text-2xl font-bold mb-2">30-Day Money-Back Guarantee</CardTitle>
-              <p className="text-gray-600 dark:text-gray-300">
-                Your investment is protected. If for any reason you're not satisfied with our service, 
-                we'll provide a full refund within 30 days of your recording session.
-              </p>
-            </CardHeader>
-          </Card>
-
           <div className="grid md:grid-cols-2 gap-6">
             {guaranteePoints.map((point, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
@@ -79,11 +66,12 @@ const GuaranteeSection = () => {
 
           <div className="mt-8 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 text-center">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              <strong>How to Request a Refund:</strong> Simply email us at{" "}
+              <strong>Questions or Concerns:</strong> If you have any questions about our process or need support, 
+              please email us at{" "}
               <a href="mailto:stories@melrobbins.com" className="text-red-600 dark:text-red-400 hover:underline">
                 stories@melrobbins.com
               </a>{" "}
-              within 30 days of your recording session. We'll process your refund within 5-7 business days.
+              and we'll be happy to help.
             </p>
           </div>
         </div>
