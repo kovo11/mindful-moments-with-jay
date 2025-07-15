@@ -6,23 +6,23 @@ const AboutSection = () => {
   const values = [
     {
       icon: Heart,
-      title: "Authentic Storytelling",
-      description: "We believe in the power of raw, honest narratives that connect us to our shared humanity."
+      title: "Bold Action",
+      description: "We celebrate stories of courage - those moments when you pushed through fear and took action despite the odds."
     },
     {
       icon: Users,
-      title: "Global Community",
-      description: "Your story joins a worldwide network of voices creating positive change and healing."
+      title: "Transformation Community",
+      description: "Join millions who've used the 5 Second Rule to change their lives and inspire others to do the same."
     },
     {
       icon: Mic,
-      title: "Professional Platform",
-      description: "Share your message through one of the world's most trusted and respected podcast platforms."
+      title: "Authentic Platform",
+      description: "Share your real, unfiltered story on one of the most trusted platforms for personal development."
     },
     {
       icon: Award,
-      title: "Lasting Impact",
-      description: "Be part of a legacy that inspires others to find courage, hope, and purpose in their own journeys."
+      title: "Lasting Change",
+      description: "Your breakthrough story becomes part of a movement that helps others stop overthinking and start living."
     }
   ];
 
@@ -32,22 +32,22 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             About 
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2">
-              "Real People, Real Stories"
+            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
+              "Real Change, Real Stories"
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-            This special mini-series on <em>On Purpose with Jay Shetty</em> is dedicated to amplifying the voices 
-            of everyday heroes whose stories of resilience, transformation, and service deserve to be heard. 
-            We believe that in sharing our struggles and triumphs, we create bridges of understanding and hope 
-            that can heal both the storyteller and the listener.
+            This exclusive series with <em>Mel Robbins</em> showcases real people who've used simple tools like 
+            the 5 Second Rule to create extraordinary change in their lives. We're looking for stories of transformation, 
+            breakthrough moments, and the courage to act when it mattered most. Your story could be the catalyst 
+            that helps someone else take that first brave step.
           </p>
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6">
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6">
             <blockquote className="text-xl italic text-gray-700 dark:text-gray-300 font-medium">
-              "The stories that we tell ourselves and others have the power to shape our reality. 
-              When we share our truth with courage and vulnerability, we give others permission to do the same."
+              "You are one decision away from a completely different life. The moment you feel yourself 
+              hesitating, count 5-4-3-2-1 and move. Your life is waiting for you to be brave."
             </blockquote>
-            <p className="text-purple-600 dark:text-purple-400 font-semibold mt-4">— Jay Shetty</p>
+            <p className="text-red-600 dark:text-red-400 font-semibold mt-4">— Mel Robbins</p>
           </div>
         </div>
         
@@ -55,7 +55,7 @@ const AboutSection = () => {
           {values.map((value, index) => (
             <Card key={index} className="text-center border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="pb-4">
-                <div className="mx-auto w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+                <div className="mx-auto w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
                   <value.icon className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-lg">{value.title}</CardTitle>
@@ -71,12 +71,12 @@ const AboutSection = () => {
         
         <div className="mt-16 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Why Your Story Matters</h3>
+            <h3 className="text-2xl font-bold mb-4">Why Your Breakthrough Matters</h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-              In a world that often feels divided, stories have the unique power to remind us of our shared humanity. 
-              Your journey—with all its ups and downs—contains wisdom that could be the key to someone else's breakthrough. 
-              By sharing your story, you're not just telling your truth; you're offering hope, healing, and connection to 
-              millions of listeners around the world.
+              Every day, millions of people struggle with self-doubt, fear, and procrastination. Your story of taking action—
+              despite being scared, despite the obstacles, despite the voice in your head saying "you can't"—is proof that 
+              change is possible. When you share how you pushed through that moment of hesitation, you give others permission 
+              to believe in themselves and take that first crucial step toward the life they really want.
             </p>
           </div>
         </div>

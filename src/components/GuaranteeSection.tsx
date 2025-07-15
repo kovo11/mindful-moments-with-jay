@@ -12,7 +12,7 @@ const GuaranteeSection = () => {
     {
       icon: CheckCircle,
       title: "Quality Assurance",
-      description: "We guarantee professional-grade production quality that meets the standards of the On Purpose podcast."
+      description: "We guarantee professional-grade production quality that meets Mel Robbins' high standards for authenticity and impact."
     },
     {
       icon: Clock,
@@ -32,19 +32,19 @@ const GuaranteeSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our 
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2">
+            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
               Guarantee
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We stand behind our commitment to honor your story with the highest level of professionalism and care.
+            We stand behind our commitment to honor your breakthrough story with the highest level of professionalism and care.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-green-200 dark:border-green-800 shadow-lg mb-8">
-            <CardHeader className="text-center bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
-              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+            <CardHeader className="text-center bg-gradient-to-r from-green-50 to-orange-50 dark:from-green-900/20 dark:to-orange-900/20">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-2xl font-bold mb-2">30-Day Money-Back Guarantee</CardTitle>
@@ -60,7 +60,7 @@ const GuaranteeSection = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <point.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -77,11 +77,11 @@ const GuaranteeSection = () => {
             ))}
           </div>
 
-          <div className="mt-8 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6 text-center">
+          <div className="mt-8 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 text-center">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               <strong>How to Request a Refund:</strong> Simply email us at{" "}
-              <a href="mailto:on-purpose@jayshetty.info" className="text-purple-600 dark:text-purple-400 hover:underline">
-                on-purpose@jayshetty.info
+              <a href="mailto:stories@melrobbins.com" className="text-red-600 dark:text-red-400 hover:underline">
+                stories@melrobbins.com
               </a>{" "}
               within 30 days of your recording session. We'll process your refund within 5-7 business days.
             </p>

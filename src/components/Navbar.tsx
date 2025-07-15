@@ -42,32 +42,32 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="text-2xl font-bold text-primary">
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Real People, Real Stories</span>
+            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Real Change, Real Stories</span>
           </a>
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <button onClick={() => scrollToSection("stories")} className="text-sm font-medium hover:text-purple-500 transition-colors">Stories</button>
-          <button onClick={() => scrollToSection("about")} className="text-sm font-medium hover:text-purple-500 transition-colors">About</button>
-          <button onClick={() => scrollToSection("process")} className="text-sm font-medium hover:text-purple-500 transition-colors">Process</button>
-          <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-purple-500 transition-colors">FAQ</button>
+          <button onClick={() => scrollToSection("stories")} className="text-sm font-medium hover:text-red-500 transition-colors">Stories</button>
+          <button onClick={() => scrollToSection("about")} className="text-sm font-medium hover:text-red-500 transition-colors">About</button>
+          <button onClick={() => scrollToSection("process")} className="text-sm font-medium hover:text-red-500 transition-colors">Process</button>
+          <button onClick={() => scrollToSection("faq")} className="text-sm font-medium hover:text-red-500 transition-colors">FAQ</button>
           
           <div className="flex items-center space-x-2">
-            <a href="https://www.instagram.com/jayshetty/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Instagram className="h-4 w-4 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://www.instagram.com/melrobbins/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram className="h-4 w-4 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
-            <a href="https://www.facebook.com/JayShettyIW/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook className="h-4 w-4 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://www.facebook.com/melrobbins/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="h-4 w-4 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
-            <a href="https://twitter.com/jayshetty" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-4 w-4 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://twitter.com/melrobbins" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Twitter className="h-4 w-4 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
           </div>
           
           <Button 
             onClick={handleApplyNow} 
-            className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90"
+            className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90"
           >
             Apply Now
           </Button>
@@ -89,20 +89,20 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md py-4 px-6 flex flex-col space-y-4">
-          <button onClick={() => scrollToSection("stories")} className="text-left py-2 hover:text-purple-500 transition-colors">Stories</button>
-          <button onClick={() => scrollToSection("about")} className="text-left py-2 hover:text-purple-500 transition-colors">About</button>
-          <button onClick={() => scrollToSection("process")} className="text-left py-2 hover:text-purple-500 transition-colors">Process</button>
-          <button onClick={() => scrollToSection("faq")} className="text-left py-2 hover:text-purple-500 transition-colors">FAQ</button>
+          <button onClick={() => scrollToSection("stories")} className="text-left py-2 hover:text-red-500 transition-colors">Stories</button>
+          <button onClick={() => scrollToSection("about")} className="text-left py-2 hover:text-red-500 transition-colors">About</button>
+          <button onClick={() => scrollToSection("process")} className="text-left py-2 hover:text-red-500 transition-colors">Process</button>
+          <button onClick={() => scrollToSection("faq")} className="text-left py-2 hover:text-red-500 transition-colors">FAQ</button>
           
           <div className="flex items-center space-x-4 py-2">
-            <a href="https://www.instagram.com/jayshetty/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Instagram className="h-5 w-5 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://www.instagram.com/melrobbins/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
-            <a href="https://www.facebook.com/JayShettyIW/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook className="h-5 w-5 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://www.facebook.com/melrobbins/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
-            <a href="https://twitter.com/jayshetty" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-gray-600 hover:text-purple-500 transition-colors" />
+            <a href="https://twitter.com/melrobbins" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Twitter className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors" />
             </a>
           </div>
           
@@ -111,7 +111,7 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
               handleApplyNow();
               setIsMenuOpen(false);
             }} 
-            className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 w-full"
+            className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 w-full"
           >
             Apply Now
           </Button>

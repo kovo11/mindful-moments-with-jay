@@ -14,9 +14,9 @@ const VideoSection = () => {
     <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hear from Jay</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hear from Mel</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Get a glimpse of the transformative experience you'll have at Jay's exclusive meet & greet events.
+            Get inspired by Mel's message about the power of taking action and how your story can change someone's life.
           </p>
         </div>
         
@@ -26,7 +26,7 @@ const VideoSection = () => {
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <img 
                   src="/lovable-uploads/165f9bab-606e-4866-989e-47a399208e9c.png" 
-                  alt="Jay Shetty - Genius" 
+                  alt="Mel Robbins - Motivational Speaker" 
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -38,13 +38,13 @@ const VideoSection = () => {
                   <Play className="h-6 w-6 text-white" fill="white" />
                 </Button>
                 <p className="relative z-10 text-white font-medium mt-4">
-                  Watch Jay's Welcome Message
+                  Watch Mel's Welcome Message
                 </p>
               </div>
             ) : (
               <iframe 
-                src="https://www.youtube.com/embed/9tMUCGBj8J0?autoplay=1" 
-                title="Jay Shetty Video"
+                src="https://www.youtube.com/embed/Lp7E973zozc?autoplay=1" 
+                title="Mel Robbins Video"
                 className="absolute top-0 left-0 w-full h-full"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

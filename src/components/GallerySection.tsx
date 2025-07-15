@@ -12,36 +12,36 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    content: "Honestly wasn't sure about this at first but the whole process was so supportive. My story aired last month and I've had strangers message me saying it helped them through their own struggles. Worth it 100%",
-    author: "Maya Rodriguez",
-    role: "Teacher & Mom",
+    content: "I was stuck in analysis paralysis for months about starting my business. After sharing my 5-4-3-2-1 breakthrough moment with Mel, I finally took action. The response has been incredible - so many people messaged saying my story gave them the push they needed too!",
+    author: "Sarah Chen",
+    role: "Entrepreneur & Mom",
     image: "https://i.pravatar.cc/150?img=32",
-    social: "@maya_teaches"
+    social: "@sarahbuilds"
   },
   {
-    content: "The prep call really helped me get clear on what I wanted to share. Jay asked questions I hadn't even thought of. Still get chills listening back to my episode.",
-    author: "David Kim",
-    role: "Small Business Owner",
+    content: "Mel helped me realize that my fear of public speaking was just my brain trying to 'protect' me. Counting down 5-4-3-2-1 before taking the stage changed everything. Now I help others do the same through my story on the series.",
+    author: "Marcus Johnson",
+    role: "Teacher & Speaker",
     image: "https://i.pravatar.cc/150?img=69",
-    social: "@davidbuilds"
+    social: "@marcusspeaks"
   },
   {
-    content: "I was nervous about being so vulnerable on such a big platform, but the team made it feel safe. My episode just went live and the response has been incredible. People are sharing their own stories now too ❤️",
-    author: "Priya Patel",
-    role: "Wellness Coach",
+    content: "The recording process was so supportive. Mel really listened and helped me find the core of my transformation story. When my episode aired, the messages I got from listeners who related to my journey made it all worth it. We're creating real change together! 🚀",
+    author: "Emily Rodriguez",
+    role: "Life Coach",
     image: "https://i.pravatar.cc/150?img=47",
-    social: "@priyawellness"
+    social: "@emilycoaches"
   }
 ];
 
 const GallerySection = () => {
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-purple-50 dark:bg-gray-800/50">
+    <section id="gallery" className="py-16 md:py-24 bg-red-50 dark:bg-gray-800/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Gallery & Stories</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            See highlights from recent recording sessions and hear from guests who've shared their stories.
+            See highlights from recent recording sessions and hear from guests who've shared their breakthrough stories.
           </p>
         </div>
         
@@ -56,7 +56,7 @@ const GallerySection = () => {
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/23629d4e-57cb-4704-bc8c-1cf3f9c8519f.png" 
-              alt="Jay Shetty Portrait" 
+              alt="Mel Robbins Portrait" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -70,7 +70,7 @@ const GallerySection = () => {
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/99ab6ae0-9b81-4c92-b077-83ecd1b587e8.png" 
-              alt="Jay with Guest" 
+              alt="Mel with Guest" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -92,7 +92,7 @@ const GallerySection = () => {
                     <h4 className="font-medium">{testimonial.author}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
                     {testimonial.social && (
-                      <p className="text-xs text-purple-600 dark:text-purple-400">{testimonial.social}</p>
+                      <p className="text-xs text-red-600 dark:text-red-400">{testimonial.social}</p>
                     )}
                   </div>
                 </div>
