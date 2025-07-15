@@ -48,29 +48,29 @@ const GallerySection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/8ab62c60-56db-42f0-92da-5f70de8eb564.png" 
-              alt="Recording Session" 
+              src="/lovable-uploads/b4ee70a0-f33f-4aa6-84ee-8b12f1bcd39b.png" 
+              alt="Mel Robbins speaking at event with audience" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/23629d4e-57cb-4704-bc8c-1cf3f9c8519f.png" 
-              alt="Mel Robbins Portrait" 
+              src="/lovable-uploads/d2497e17-07a8-4c1f-bb94-28c483005175.png" 
+              alt="Mel Robbins podcast recording session" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/ee47be30-7138-4562-bcc7-070fc2713f63.png" 
-              alt="Interview Setup" 
+              src="/lovable-uploads/47667ddd-6b60-4538-9597-8472b4b433a6.png" 
+              alt="Mel Robbins with Oprah Winfrey" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/99ab6ae0-9b81-4c92-b077-83ecd1b587e8.png" 
-              alt="Mel with Guest" 
+              src="/lovable-uploads/3219ad76-6fef-41ef-a263-165e04075657.png" 
+              alt="Mel Robbins in podcast studio" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
