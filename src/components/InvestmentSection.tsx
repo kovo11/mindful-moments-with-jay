@@ -9,10 +9,10 @@ interface InvestmentSectionProps {
 
 const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
   const included = [
-    "Professional recording session with Jay Shetty",
+    "Professional recording session with Mel Robbins' team",
     "Pre-interview preparation and story coaching",
     "Professional audio production and editing",
-    "Global distribution to 50M+ listeners",
+    "Global distribution to 25M+ followers",
     "Promotional support across social media platforms",
     "Lifetime access to your recorded episode",
     "Certificate of participation",
@@ -23,12 +23,12 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
     {
       icon: Users,
       title: "Reach Millions",
-      description: "Your story will reach a global audience of conscious listeners seeking inspiration and connection."
+      description: "Your story will reach a global audience seeking inspiration and transformation through action."
     },
     {
       icon: Heart,
-      title: "Create Healing",
-      description: "Help others feel less alone in their struggles and more hopeful about their future."
+      title: "Create Change",
+      description: "Help others feel empowered to push through fear and take the action they've been avoiding."
     },
     {
       icon: CheckCircle,
@@ -47,7 +47,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Investment in Your 
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2">
+            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
               Story
             </span>
           </h2>
@@ -58,9 +58,9 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <Card className="border-2 border-purple-200 dark:border-purple-800 shadow-xl">
-            <CardHeader className="text-center bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20">
-              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+          <Card className="border-2 border-red-200 dark:border-red-800 shadow-xl">
+            <CardHeader className="text-center bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
                 <DollarSign className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-3xl font-bold mb-2">$250</CardTitle>
@@ -87,7 +87,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
                   <div className="space-y-4">
                     {impact.map((item, index) => (
                       <div key={index} className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <item.icon className="w-4 h-4 text-white" />
                         </div>
                         <div>
@@ -100,7 +100,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6 mb-8">
+              <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 mb-8">
                 <h4 className="text-lg font-semibold mb-3">Our Commitment to Your Story:</h4>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   Our intention has never been to sell stories. This support fee simply ensures our team can 
@@ -117,7 +117,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
                 <Button
                   onClick={handleApplyNow}
                   size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white font-medium px-12 py-4 text-lg"
+                  className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 text-white font-medium px-12 py-4 text-lg"
                 >
                   Apply to Share Your Story
                 </Button>
