@@ -13,32 +13,32 @@ interface FaqItemProps {
 
 const faqItems: FaqItemProps[] = [
   {
-    question: "Is this a paid feature or advertisement?",
-    answer: "No. We never accept payment for features. Guests are selected based on the impact, authenticity, and alignment of their story with Mel's mission of helping people take action. The production support fee only covers the technical and creative work that goes into making your episode powerful and professional."
+    question: "Is there any cost to participate?",
+    answer: "No, there are no fees required to participate. Once you pass our verification process, you'll gain free access to join a group session with Mel Robbins and have your story featured to our 25M+ global audience."
   },
   {
-    question: "What does the production fee cover?",
-    answer: "Your one-time contribution supports: Professional recording setup (studio or remote), Expert editing and audio mastering, Custom-designed quote graphics for social sharing, Promotional video clips, Guest coaching and prep sessions, and complete post-production. You receive a full media package regardless of publishing timeline."
+    question: "What is the verification process?",
+    answer: "We verify your identity, location, and business background to ensure authentic storytelling. This process typically takes 3-5 business days and helps us maintain the quality and trust our audience expects from real transformation stories."
   },
   {
-    question: "How much is the production support fee?",
-    answer: "The fee is disclosed only after you're shortlisted based on your story's impact potential. We keep it affordable and transparent, with all funds directly supporting your story's professional production and visibility."
+    question: "How does the group session work?",
+    answer: "After verification, you'll join a 20-minute group preparation call, followed by a 60-90 minute recording session with Mel Robbins and other verified storytellers. This intimate group setting allows for deeper connection and more impactful storytelling."
   },
   {
-    question: "Is the fee refundable?",
-    answer: "No. Once production begins, our team allocates significant resources, time, and expertise toward your episode. However, you'll always receive your complete media assets and professional recording - regardless of the publishing schedule."
+    question: "What happens to my story after recording?",
+    answer: "Your story will be professionally edited and distributed to Mel's 25M+ followers across all platforms. You'll receive promotional support, lifetime access to your episode, and a certificate of participation."
   },
   {
-    question: "Why not cover all costs for guests?",
-    answer: "We deeply value authentic stories, which is why we provide extensive coaching, professional production, and marketing support. The co-investment model ensures sustainability while keeping the focus on genuine transformation stories rather than commercialized content."
+    question: "Can I review my story before it's published?",
+    answer: "Yes, you maintain full control over your narrative throughout the process. You'll have the opportunity to review and approve your story before it goes live to ensure it represents your experience authentically."
   },
   {
-    question: "Who produces this series?",
-    answer: "This series is produced by Mel Robbins Media in collaboration with certified production professionals who share Mel's commitment to authenticity, action, and empowerment. While inspired by Mel's methods, this is an independent production focused on real transformation stories."
+    question: "Who is eligible to apply?",
+    answer: "We welcome applications from anyone with a genuine transformation story that can inspire others to take action. Our verification process ensures we feature authentic stories from real people who have overcome challenges and created meaningful change."
   },
   {
     question: "What happens after I apply?",
-    answer: "Once you apply: 1. Our team reviews your breakthrough story for impact and authenticity 2. If selected, you'll receive confirmation and next steps 3. You'll get a link to secure your spot with the production support fee 4. We'll schedule your pre-recording coaching call 5. Your professional recording session takes place (virtual or in-studio)"
+    answer: "Once you apply: 1. Our team reviews your story for impact and authenticity 2. If selected, we begin the verification process 3. After verification, you'll join the group preparation call 4. Finally, you'll participate in the group recording session with Mel Robbins"
   }
 ];
 

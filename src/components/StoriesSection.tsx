@@ -35,7 +35,7 @@ const StoriesSection = ({ openBooking }: StoriesSectionProps) => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Stories That 
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2">
+            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
               Matter
             </span>
           </h2>
@@ -49,7 +49,7 @@ const StoriesSection = ({ openBooking }: StoriesSectionProps) => {
           {storyTypes.map((type, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+                <div className="mx-auto w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
                   <type.icon className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-xl mb-2">{type.title}</CardTitle>
@@ -58,8 +58,8 @@ const StoriesSection = ({ openBooking }: StoriesSectionProps) => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-                  <p className="text-sm text-purple-700 dark:text-purple-300 font-medium mb-1">Examples:</p>
+                <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                  <p className="text-sm text-red-700 dark:text-red-300 font-medium mb-1">Examples:</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{type.examples}</p>
                 </div>
               </CardContent>
@@ -68,7 +68,7 @@ const StoriesSection = ({ openBooking }: StoriesSectionProps) => {
         </div>
         
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h3 className="text-2xl font-bold mb-4">Ready to Share Your Journey?</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
               Every story has the power to heal, inspire, and create connection. 
@@ -77,7 +77,7 @@ const StoriesSection = ({ openBooking }: StoriesSectionProps) => {
             <Button
               onClick={openBooking}
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white font-medium px-8"
+              className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 text-white font-medium px-8"
             >
               Apply to Share Your Story
             </Button>

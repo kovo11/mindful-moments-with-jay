@@ -70,10 +70,10 @@ export const generateEmailTemplate = (
 
           <div style="margin-bottom: 30px;">
             <p>Hello ${name},</p>
-            <p>Thank you for booking your spot at the upcoming Jay Shetty ${formatEventType(eventType)} event. We're excited to see you there!</p>
+            <p>Thank you for booking your spot at the upcoming Mel Robbins ${formatEventType(eventType)} event. We're excited to see you there!</p>
           </div>
 
-          <div style="background-color: #f7f7f7; border-left: 4px solid #8a2be2; padding: 15px; margin-bottom: 30px;">
+          <div style="background-color: #f7f7f7; border-left: 4px solid #dc2626; padding: 15px; margin-bottom: 30px;">
             <h3 style="margin-top: 0; color: #333;">Event Details</h3>
             <p><strong>Type:</strong> ${formatEventType(eventType)}</p>
             <p><strong>Location:</strong> ${location}</p>
@@ -87,17 +87,17 @@ export const generateEmailTemplate = (
           </div>
 
           <div style="text-align: center; margin-top: 40px;">
-            <a href="https://jayshetty.me" style="background: linear-gradient(to right, #8a2be2, #4169e1); color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold;">Visit Our Website</a>
+            <a href="https://melrobbins.com" style="background: linear-gradient(to right, #dc2626, #ea580c); color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold;">Visit Our Website</a>
           </div>
 
           <div style="margin-top: 40px; text-align: center; color: #666; font-size: 14px;">
-            <p>Follow Jay Shetty</p>
+            <p>Follow Mel Robbins</p>
             <div>
-              <a href="https://instagram.com/jayshetty" style="color: #8a2be2; margin: 0 10px; text-decoration: none;">Instagram</a>
-              <a href="https://twitter.com/jayshetty" style="color: #8a2be2; margin: 0 10px; text-decoration: none;">Twitter</a>
-              <a href="https://facebook.com/JayShettyIW" style="color: #8a2be2; margin: 0 10px; text-decoration: none;">Facebook</a>
+              <a href="https://instagram.com/melrobbins" style="color: #dc2626; margin: 0 10px; text-decoration: none;">Instagram</a>
+              <a href="https://twitter.com/melrobbins" style="color: #dc2626; margin: 0 10px; text-decoration: none;">Twitter</a>
+              <a href="https://facebook.com/melrobbinsofficial" style="color: #dc2626; margin: 0 10px; text-decoration: none;">Facebook</a>
             </div>
-            <p style="margin-top: 20px;">© ${new Date().getFullYear()} Jay Shetty Inc. All rights reserved.</p>
+            <p style="margin-top: 20px;">© ${new Date().getFullYear()} Mel Robbins Inc. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@ export const sendConfirmationEmail = async (
     const templateParams = {
       to_email: email,
       to_name: name,
-      subject: `Jay Shetty ${formatEventType(eventType)} Booking Confirmation`,
+      subject: `Mel Robbins ${formatEventType(eventType)} Booking Confirmation`,
       message_html: emailContent,
     };
 

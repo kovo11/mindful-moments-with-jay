@@ -187,7 +187,7 @@ Marketing Consent: ${marketingConsent ? 'Yes' : 'No'}
               <DialogHeader>
                 <DialogTitle className="text-2xl">Book Your Spot</DialogTitle>
                 <DialogDescription>
-                  Fill in your details to reserve your place at a Jay Shetty meet & greet event.
+                  Fill in your details to reserve your place at a Mel Robbins storytelling event.
                 </DialogDescription>
               </DialogHeader>
               
@@ -344,13 +344,13 @@ Marketing Consent: ${marketingConsent ? 'Yes' : 'No'}
                     onCheckedChange={(checked) => setMarketingConsent(checked as boolean)}
                   />
                   <Label htmlFor="marketing" className="text-sm leading-tight">
-                    I agree to receive marketing emails from Jay Shetty's team about 
+                    I agree to receive marketing emails from Mel Robbins' team about 
                     upcoming events, resources, and offers. I understand I can unsubscribe at any time.
                   </Label>
                 </div>
                 
-                <div className="bg-purple-50 dark:bg-gray-800 p-4 rounded-md">
-                  <h4 className="font-medium text-purple-700 dark:text-purple-400 mb-2">Booking Process</h4>
+                <div className="bg-red-50 dark:bg-gray-800 p-4 rounded-md">
+                  <h4 className="font-medium text-red-700 dark:text-red-400 mb-2">Booking Process</h4>
                   <ol className="text-sm text-gray-700 dark:text-gray-300 space-y-1 list-decimal list-inside">
                     <li>Complete this form with your details</li>
                     <li>Receive a confirmation email with payment link</li>
@@ -370,7 +370,7 @@ Marketing Consent: ${marketingConsent ? 'Yes' : 'No'}
                 </Button>
                 <Button 
                   type="submit" 
-                  className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90"
+                  className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Processing..." : "Complete Booking"}

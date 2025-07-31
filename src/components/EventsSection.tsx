@@ -185,10 +185,10 @@ const allEvents: EventProps[] = [
 
 const EventCard = ({ event, openBooking }: { event: EventProps, openBooking: () => void }) => {
   return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${event.isFeatured ? 'border-purple-300 dark:border-purple-700 shadow-md' : ''}`}>
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${event.isFeatured ? 'border-red-300 dark:border-red-700 shadow-md' : ''}`}>
       {event.isFeatured && (
         <div className="absolute -top-3 -right-3">
-          <Badge className="bg-gradient-to-r from-purple-500 to-blue-500">
+          <Badge className="bg-gradient-to-r from-red-500 to-orange-500">
             Featured
           </Badge>
         </div>
@@ -213,7 +213,7 @@ const EventCard = ({ event, openBooking }: { event: EventProps, openBooking: () 
           <div>
             <span className="font-medium">Available:</span> {event.spotsAvailable} spots
           </div>
-          <div className="text-lg font-semibold text-purple-600 dark:text-purple-400 mt-2">
+          <div className="text-lg font-semibold text-red-600 dark:text-red-400 mt-2">
             ${event.price}
           </div>
         </div>
@@ -222,7 +222,7 @@ const EventCard = ({ event, openBooking }: { event: EventProps, openBooking: () 
       <CardFooter>
         <Button 
           onClick={openBooking}
-          className={`w-full ${event.isFeatured ? 'bg-gradient-to-r from-purple-600 to-blue-500' : ''}`}
+          className={`w-full ${event.isFeatured ? 'bg-gradient-to-r from-red-600 to-orange-500' : ''}`}
         >
           Book Now
         </Button>
@@ -283,7 +283,7 @@ const EventsSection = ({ openBooking }: EventsSectionProps) => {
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Upcoming Events</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Join Jay Shetty at one of his exclusive meet & greet events happening across North America.
+            Join Mel Robbins at one of her exclusive storytelling events happening across North America.
             Limited spots available for these transformative experiences.
           </p>
         </div>
@@ -297,7 +297,7 @@ const EventsSection = ({ openBooking }: EventsSectionProps) => {
               placeholder="Search events..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="pl-10 pr-4 py-2 w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
           
@@ -327,7 +327,7 @@ const EventsSection = ({ openBooking }: EventsSectionProps) => {
             <Button 
               variant="ghost" 
               onClick={resetFilters} 
-              className="text-sm text-purple-600 dark:text-purple-400"
+              className="text-sm text-red-600 dark:text-red-400"
             >
               Clear Filters
             </Button>
