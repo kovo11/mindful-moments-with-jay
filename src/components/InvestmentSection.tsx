@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Heart, Users } from "lucide-react";
+import { CheckCircle, Shield, Heart, Users } from "lucide-react";
 
 interface InvestmentSectionProps {
   openBooking: () => void;
@@ -9,14 +9,15 @@ interface InvestmentSectionProps {
 
 const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
   const included = [
-    "Professional recording session with Mel Robbins' team",
+    "Identity and background verification process",
+    "20-minute group preparation call with our team",
+    "Professional group recording session with Mel Robbins",
     "Pre-interview preparation and story coaching",
     "Professional audio production and editing",
     "Global distribution to 25M+ followers",
     "Promotional support across social media platforms",
     "Lifetime access to your recorded episode",
-    "Certificate of participation",
-    "Ongoing support throughout the process"
+    "Certificate of participation"
   ];
 
   const impact = [
@@ -46,14 +47,14 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Investment in Your 
+            Join Our Exclusive 
             <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ml-2">
-              Story
+              Community
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            To ensure the highest quality production and honor the significance of your story, 
-            we ask for a one-time production support contribution that covers all professional services.
+            We carefully select storytellers through our verification process to ensure authentic, 
+            inspiring stories that resonate with our global community of 25M+ followers.
           </p>
         </div>
         
@@ -61,11 +62,11 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
           <Card className="border-2 border-red-200 dark:border-red-800 shadow-xl">
             <CardHeader className="text-center bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">
               <div className="mx-auto w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
-                <DollarSign className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <CardTitle className="text-3xl font-bold mb-2">$250</CardTitle>
+              <CardTitle className="text-3xl font-bold mb-2">Verified Access</CardTitle>
               <CardDescription className="text-lg">
-                Complete Professional Production Package
+                Complete Storyteller Experience - No Cost
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8">
@@ -101,15 +102,15 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
               </div>
               
               <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 mb-8">
-                <h4 className="text-lg font-semibold mb-3">Our Commitment to Your Story:</h4>
+                <h4 className="text-lg font-semibold mb-3">Why We Use a Verification Process:</h4>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                  Our intention has never been to sell stories. This support fee simply ensures our team can 
-                  uphold the integrity, quality, and care your story deserves. This is not a payment for 
-                  appearance — it's an investment in your voice being heard the way it should.
+                  To maintain the authenticity and quality our 25M+ followers trust, we carefully verify each 
+                  storyteller's identity, location, and business background. This ensures every story shared 
+                  is genuine and can truly inspire others to take meaningful action.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Most importantly, it allows us to maintain the quality and integrity that our global 
-                  audience expects while giving your story the platform it deserves.
+                  Once verified, you'll join a small group session with Mel Robbins herself - completely free. 
+                  This intimate setting allows for deeper connection and more impactful storytelling.
                 </p>
               </div>
               
@@ -122,7 +123,7 @@ const InvestmentSection = ({ openBooking }: InvestmentSectionProps) => {
                   Apply to Share Your Story
                 </Button>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                  Investment is only required if your application is selected
+                  Verification process required - No payment needed
                 </p>
               </div>
             </CardContent>

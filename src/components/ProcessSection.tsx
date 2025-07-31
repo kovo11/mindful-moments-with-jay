@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Headphones, Send } from "lucide-react";
+import { CheckCircle, Clock, Headphones, Send, Shield } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
@@ -11,15 +11,21 @@ const ProcessSection = () => {
       timeline: "Takes 5-10 minutes"
     },
     {
+      icon: Shield,
+      title: "Verification Process",
+      description: "We verify your identity, location, and business background to ensure authentic storytelling for our community.",
+      timeline: "3-5 business days"
+    },
+    {
       icon: CheckCircle,
-      title: "Selection & Preparation",
-      description: "If selected, our team will work with you to prepare your story and ensure you feel comfortable and confident.",
-      timeline: "1-2 weeks"
+      title: "Group Preparation Call",
+      description: "Join a 20-minute group call with our team to prepare your story and meet other verified storytellers.",
+      timeline: "20 minutes"
     },
     {
       icon: Headphones,
-      title: "Professional Recording",
-      description: "Record your episode with Jay in a supportive, professional environment designed to honor your story.",
+      title: "Group Session with Mel",
+      description: "Record your story with Mel Robbins in an intimate group setting, sharing your experience with fellow storytellers.",
       timeline: "60-90 minutes"
     },
     {
@@ -74,22 +80,22 @@ const ProcessSection = () => {
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Our Commitment to You</h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              We understand that sharing your story requires courage and trust. Our team is committed to creating 
-              a safe, supportive environment where your voice is heard and honored. You'll have full control over 
-              your narrative and the opportunity to review everything before it goes live.
+              We understand that sharing your story requires courage and trust. Through our verification process, we ensure 
+              a safe, authentic community of storytellers. You'll have full control over your narrative and connect with 
+              Mel Robbins and fellow verified storytellers in an intimate group setting.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                <p className="font-semibold text-purple-600 dark:text-purple-400">Safe Environment</p>
-                <p className="text-gray-600 dark:text-gray-300">Professional, supportive recording space</p>
+                <p className="font-semibold text-purple-600 dark:text-purple-400">Verified Community</p>
+                <p className="text-gray-600 dark:text-gray-300">Connect with authenticated storytellers</p>
               </div>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                <p className="font-semibold text-purple-600 dark:text-purple-400">Full Control</p>
-                <p className="text-gray-600 dark:text-gray-300">Review and approve before publication</p>
+                <p className="font-semibold text-purple-600 dark:text-purple-400">No Cost Required</p>
+                <p className="text-gray-600 dark:text-gray-300">Completely free after verification</p>
               </div>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                <p className="font-semibold text-purple-600 dark:text-purple-400">Ongoing Support</p>
-                <p className="text-gray-600 dark:text-gray-300">Available throughout the entire process</p>
+                <p className="font-semibold text-purple-600 dark:text-purple-400">Group Experience</p>
+                <p className="text-gray-600 dark:text-gray-300">Intimate setting with Mel and peers</p>
               </div>
             </div>
           </div>
