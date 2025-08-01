@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { initEmailJS } from "@/utils/emailUtils";
+import melRobbinsHero from "@/assets/mel-robbins-hero.jpg";
 
 interface HeroProps {
   openBooking: () => void;
@@ -38,6 +39,18 @@ const Hero = ({ openBooking }: HeroProps) => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
+        {/* Mel Robbins Hero Image */}
+        <div className="flex justify-center mb-8">
+          <div className="relative">
+            <img 
+              src={melRobbinsHero} 
+              alt="Mel Robbins - Motivational Speaker and Author" 
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-2xl"
+            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20"></div>
+          </div>
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
             <p className="text-sm font-medium text-red-600 dark:text-red-400 mb-2">
@@ -46,14 +59,14 @@ const Hero = ({ openBooking }: HeroProps) => {
             </p>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Stop Waiting. Start
-            <span className="ml-3 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-pulse">
+            <span className="block sm:inline sm:ml-3 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent animate-pulse">
               Living
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed px-4 sm:px-0">
             Join Mel Robbins' exclusive <strong>"Real Change, Real Stories"</strong> series. 
             Share your breakthrough moment, your transformation, and inspire millions to take action. 
             Your story could be the push someone needs to change their life forever.
@@ -78,7 +91,7 @@ const Hero = ({ openBooking }: HeroProps) => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto px-4 sm:px-0">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md">
               <p className="text-sm font-medium text-red-600 dark:text-red-400">Reach</p>
               <p className="text-lg font-bold">25M+ followers</p>

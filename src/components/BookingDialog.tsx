@@ -332,7 +332,7 @@ Marketing Consent: ${marketingConsent ? 'Yes' : 'No'}
                     id="questions" 
                     value={questions}
                     onChange={(e) => setQuestions(e.target.value)}
-                    placeholder="Is there anything specific you'd like to discuss with Jay? (Optional)" 
+                    placeholder="Is there anything specific you'd like to discuss with Mel? (Optional)" 
                     className="min-h-[100px]"
                   />
                 </div>

@@ -41,7 +41,7 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold text-primary">
+          <a href="/" className="text-xl md:text-2xl font-bold text-primary">
             <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Real Change, Real Stories</span>
           </a>
         </div>
@@ -77,22 +77,23 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
         <div className="flex items-center md:hidden">
           <Button 
             variant="ghost" 
-            size="icon" 
+            size="lg"
             onClick={toggleMenu}
             aria-label="Menu"
+            className="p-3"
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
       
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md py-4 px-6 flex flex-col space-y-4">
-          <button onClick={() => scrollToSection("stories")} className="text-left py-2 hover:text-red-500 transition-colors">Stories</button>
-          <button onClick={() => scrollToSection("about")} className="text-left py-2 hover:text-red-500 transition-colors">About</button>
-          <button onClick={() => scrollToSection("process")} className="text-left py-2 hover:text-red-500 transition-colors">Process</button>
-          <button onClick={() => scrollToSection("faq")} className="text-left py-2 hover:text-red-500 transition-colors">FAQ</button>
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md py-6 px-6 flex flex-col space-y-6">
+          <button onClick={() => scrollToSection("stories")} className="text-left py-3 text-lg font-medium hover:text-red-500 transition-colors">Stories</button>
+          <button onClick={() => scrollToSection("about")} className="text-left py-3 text-lg font-medium hover:text-red-500 transition-colors">About</button>
+          <button onClick={() => scrollToSection("process")} className="text-left py-3 text-lg font-medium hover:text-red-500 transition-colors">Process</button>
+          <button onClick={() => scrollToSection("faq")} className="text-left py-3 text-lg font-medium hover:text-red-500 transition-colors">FAQ</button>
           
           <div className="flex items-center space-x-4 py-2">
             <a href="https://www.instagram.com/melrobbins/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
