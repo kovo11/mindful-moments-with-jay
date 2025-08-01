@@ -69,7 +69,7 @@ const FaqSection = () => {
           <div className="mt-10 p-6 bg-red-50 dark:bg-gray-800 rounded-lg">
             <h3 className="text-xl font-semibold mb-3">Still have questions?</h3>
             <p className="mb-2">Contact our team for more information:</p>
-            <p className="text-red-700 dark:text-red-400">stories@melrobbins.com</p>
+            <p className="text-red-700 dark:text-red-400">stories@melrobbins.info</p>
             <p className="text-red-700 dark:text-red-400">+1 (888) 555-0123</p>
           </div>
         </div>

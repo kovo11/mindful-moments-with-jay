@@ -68,8 +68,8 @@ const GuaranteeSection = () => {
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               <strong>Questions or Concerns:</strong> If you have any questions about our process or need support, 
               please email us at{" "}
-              <a href="mailto:stories@melrobbins.com" className="text-red-600 dark:text-red-400 hover:underline">
-                stories@melrobbins.com
+              <a href="mailto:stories@melrobbins.info" className="text-red-600 dark:text-red-400 hover:underline">
+                stories@melrobbins.info
               </a>{" "}
               and we'll be happy to help.
             </p>
