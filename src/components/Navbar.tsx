@@ -80,9 +80,9 @@ const Navbar = ({ isScrolled, openBooking }: NavbarProps) => {
             size="lg"
             onClick={toggleMenu}
             aria-label="Menu"
-            className="p-3"
+            className="p-4"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-8 w-8" strokeWidth={3} /> : <Menu className="h-8 w-8" strokeWidth={3} />}
           </Button>
         </div>
       </div>
