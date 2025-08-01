@@ -77,6 +77,7 @@ const Hero = ({ openBooking }: HeroProps) => {
               onClick={handleApplyNow}
               size="lg"
               className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 text-white font-medium px-8"
+              data-hero-book-button
             >
               Share Your Breakthrough
             </Button>

@@ -1,105 +1,18 @@
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { toast } from "@/hooks/use-toast";
-import { initEmailJS, sendBookingEmails } from "@/utils/emailUtils";
-import { z } from "zod";
-
-// Email validation schema
-const registerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  isAgreed: z.boolean().refine(val => val === true, {
-    message: "You must agree to receive email updates",
-  }),
-});
-
-type RegisterFormData = z.infer<typeof registerFormSchema>;
 
 const RegisterSection = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isAgreed, setIsAgreed] = useState(false);
-  const [errors, setErrors] = useState<Partial<Record<keyof RegisterFormData, string>>>({});
-  
-  // Initialize EmailJS
-  useEffect(() => {
-    initEmailJS();
-  }, []);
-  
-  const validateForm = (): boolean => {
-    const formData = { name, email, isAgreed };
-    const result = registerFormSchema.safeParse(formData);
+  const handleRegisterClick = () => {
+    // Scroll to top of page where booking form is available
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     
-    if (!result.success) {
-      const fieldErrors: Partial<Record<keyof RegisterFormData, string>> = {};
-      
-      result.error.errors.forEach(error => {
-        if (error.path[0]) {
-          fieldErrors[error.path[0] as keyof RegisterFormData] = error.message;
-        }
-      });
-      
-      setErrors(fieldErrors);
-      return false;
-    }
-    
-    setErrors({});
-    return true;
-  };
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    try {
-      const registrationDetails = `
-        Name: ${name}
-        Email: ${email}
-        Marketing Consent: ${isAgreed ? 'Yes' : 'No'}
-        Registration Type: Interest List
-        Date Submitted: ${new Date().toLocaleString()}
-      `.trim();
-      
-      // Send interest registration emails
-      await sendBookingEmails(
-        email,
-        name,
-        "Global Events",
-        "interest_registration",
-        registrationDetails
-      );
-      
-      toast({
-        title: "Registration Successful",
-        description: "Thank you for your interest! We'll notify you about upcoming events.",
-        duration: 5000,
-      });
-      
-      setEmail("");
-      setName("");
-      setIsAgreed(false);
-    } catch (error) {
-      console.error("Error submitting registration:", error);
-      
-      toast({
-        title: "Registration Failed",
-        description: "We couldn't process your registration. Please try again later.",
-        variant: "destructive",
-        duration: 5000,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Trigger the booking dialog after a short delay
+    setTimeout(() => {
+      const heroBookButton = document.querySelector('[data-hero-book-button]') as HTMLButtonElement;
+      if (heroBookButton) {
+        heroBookButton.click();
+      }
+    }, 500);
   };
   
   return (
@@ -124,57 +37,14 @@ const RegisterSection = () => {
             </p>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
-              <Input 
-                id="name" 
-                type="text" 
-                placeholder="Enter your full name" 
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required 
-                className={errors.name ? "border-red-500" : ""}
-              />
-              {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
-            </div>
-            
-            <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
-              <Input 
-                id="email" 
-                type="email" 
-                placeholder="Enter your email address" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required 
-                className={errors.email ? "border-red-500" : ""}
-              />
-              {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
-            </div>
-            
-            <div className="flex items-start space-x-2">
-              <Checkbox 
-                id="agree" 
-                checked={isAgreed}
-                onCheckedChange={(checked) => setIsAgreed(checked as boolean)}
-                required 
-                className={errors.isAgreed ? "border-red-500" : ""}
-              />
-              <Label htmlFor="agree" className="text-sm leading-tight">
-                I agree to receive email updates about Mel Robbins' events and can unsubscribe at any time.
-              </Label>
-            </div>
-            {errors.isAgreed && <p className="text-sm text-red-500">{errors.isAgreed}</p>}
-            
+          <div className="text-center">
             <Button 
-              type="submit" 
-              className="w-full bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90"
-              disabled={isSubmitting}
+              onClick={handleRegisterClick}
+              className="w-full bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 text-lg py-3"
             >
-              {isSubmitting ? "Registering..." : "Register Interest"}
+              Register Interest
             </Button>
-          </form>
+          </div>
           
           <div className="mt-8">
             <h3 className="text-lg font-semibold mb-3">Benefits of Connecting with Mel</h3>
