@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import melRobbinsVideoThumbnail from "@/assets/mel-robbins-video-thumbnail.jpg";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +26,7 @@ const VideoSection = () => {
             {!isPlaying ? (
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <img 
-                  src="/lovable-uploads/165f9bab-606e-4866-989e-47a399208e9c.png" 
+                  src={melRobbinsVideoThumbnail} 
                   alt="Mel Robbins - Motivational Speaker" 
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
