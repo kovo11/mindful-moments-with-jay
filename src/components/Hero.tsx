@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { initEmailJS } from "@/utils/emailUtils";
-import melRobbinsHero from "@/assets/mel-robbins-hero.jpg";
 
 interface HeroProps {
   openBooking: () => void;
@@ -39,17 +38,6 @@ const Hero = ({ openBooking }: HeroProps) => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Mel Robbins Hero Image */}
-        <div className="flex justify-center mb-8">
-          <div className="relative">
-            <img 
-              src={melRobbinsHero} 
-              alt="Mel Robbins - Motivational Speaker and Author" 
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-2xl"
-            />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20"></div>
-          </div>
-        </div>
         
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
